@@ -16,11 +16,11 @@ public static class DateTimeNullableExtension
     [Pure]
     public static bool IsEqualTo(this System.DateTime? dateTime, System.DateTime? target)
     {
-        if (dateTime == null && target == null)
+        if (dateTime is null && target == null)
             return true;
 
         // If only one of them is null, they are not equal
-        if (dateTime == null || target == null)
+        if (dateTime is null || target == null)
             return false;
 
         if (dateTime.Value.Date != target.Value.Date)
