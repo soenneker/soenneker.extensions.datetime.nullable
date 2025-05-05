@@ -1,4 +1,4 @@
-# Contributing to Soenneker.Extensions.DateTime.Nullable
+﻿# Contributing to Soenneker.Extensions.DateTime.Nullable
 
 We're excited that you're interested in contributing!
 
