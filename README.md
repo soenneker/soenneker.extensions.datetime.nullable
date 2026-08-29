@@ -4,7 +4,7 @@
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.extensions.datetime.nullable/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.extensions.datetime.nullable/actions/workflows/codeql.yml)
 
 # ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.Extensions.DateTime.Nullable
-A collection of helpful DateTime? extension methods.
+Compares nullable `DateTime` values by calendar date while ignoring their time of day.
 
 ## Installation
 
@@ -12,15 +12,16 @@ A collection of helpful DateTime? extension methods.
 dotnet add package Soenneker.Extensions.DateTime.Nullable
 ```
 
-## Quick start
+## Usage
 
 ```csharp
 using Soenneker.Extensions.DateTime.Nullable;
 
-// Given an existing System.DateTime? named dateTime:
-var result = dateTime.IsEqualTo(target);
+DateTime? first = new DateTime(2026, 8, 29, 9, 15, 0);
+DateTime? second = new DateTime(2026, 8, 29, 22, 45, 0);
+
+bool sameDate = first.IsEqualTo(second); // true
+bool bothMissing = ((DateTime?) null).IsEqualTo(null); // true
 ```
 
-## Common operations
-
-- `IsEqualTo()` - Determines whether the nullable date part of the current `System.DateTime` object is equal to the nullable date part of another `System.DateTime` object.
+`IsEqualTo()` compares the `Date` properties only. Two null values are equal; null compared with a populated value is false. It does not convert time zones, so values representing the same instant can compare differently if their displayed calendar dates differ.
