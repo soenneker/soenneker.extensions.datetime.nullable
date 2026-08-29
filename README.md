@@ -4,10 +4,23 @@
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.extensions.datetime.nullable/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.extensions.datetime.nullable/actions/workflows/codeql.yml)
 
 # ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.Extensions.DateTime.Nullable
-### A collection of helpful DateTime? extension methods
+A collection of helpful DateTime? extension methods.
 
 ## Installation
 
-```
+```bash
 dotnet add package Soenneker.Extensions.DateTime.Nullable
 ```
+
+## Quick start
+
+```csharp
+using Soenneker.Extensions.DateTime.Nullable;
+
+// Given an existing System.DateTime? named dateTime:
+var result = dateTime.IsEqualTo(target);
+```
+
+## Common operations
+
+- `IsEqualTo()` - Determines whether the nullable date part of the current `System.DateTime` object is equal to the nullable date part of another `System.DateTime` object.
