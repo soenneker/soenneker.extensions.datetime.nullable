@@ -3,7 +3,7 @@ using System.Diagnostics.Contracts;
 namespace Soenneker.Extensions.DateTime.Nullable;
 
 /// <summary>
-/// A collection of helpful DateTime? extension methods
+/// Provides calendar-date comparison for nullable <see cref="System.DateTime"/> values.
 /// </summary>
 public static class DateTimeNullableExtension
 {

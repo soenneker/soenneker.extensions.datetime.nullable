@@ -4,7 +4,7 @@
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.extensions.datetime.nullable/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.extensions.datetime.nullable/actions/workflows/codeql.yml)
 
 # ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.Extensions.DateTime.Nullable
-Extension methods for comparing, normalizing, and otherwise working with nullable `DateTime` values without repetitive `HasValue` checks.
+Compares nullable `DateTime` values by calendar date without repetitive `HasValue` checks.
 
 ## Installation
 
